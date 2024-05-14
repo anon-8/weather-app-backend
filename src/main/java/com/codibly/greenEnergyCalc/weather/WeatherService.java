@@ -157,7 +157,7 @@ public class WeatherService {
 
                 if (fieldName.equals("sunshine_duration")) {
                     DecimalFormat df = new DecimalFormat("#.##");
-                    String estimatedPowerGenerated = df.format(Double.parseDouble(value) * 0.2 * 2.5);
+                    String estimatedPowerGenerated = df.format(Double.parseDouble(value)/60/60 * 0.2 * 2.5);
                     currentDayData.put("estimatedPowerGenerated", estimatedPowerGenerated);
                 }
             }
