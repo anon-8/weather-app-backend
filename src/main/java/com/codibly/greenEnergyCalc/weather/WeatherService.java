@@ -57,9 +57,6 @@ public class WeatherService {
         if (!parameters.containsKey("latitude") || !parameters.containsKey("longitude")) {
             throw new IllegalArgumentException("Latitude and longitude parameters are required.");
         }
-        if (!isValidLatitude(latitude) || !isValidLongitude(longitude)) {
-            throw new IllegalArgumentException("Invalid latitude or longitude format.");
-        }
         if (latitude == null || longitude == null) {
             throw new IllegalArgumentException("Latitude and longitude must be provided.");
         }
@@ -68,8 +65,6 @@ public class WeatherService {
         if (lat < -90 || lat > 90 || lon < -180 || lon > 180) {
             throw new IllegalArgumentException("Latitude must be between -90 and 90, and longitude must be between -180 and 180.");
         }
-
-
     }
 
     private static void initializeRestTemplate() {
@@ -188,16 +183,6 @@ public class WeatherService {
         }
 
         return weatherAPIEndpoint + "?" + queryString;
-    }
-
-    private static boolean isValidLatitude(String latitude) {
-        String latitudePattern = "^[-]?(90(\\.0{1,6})?|[0-8]?\\d(\\.\\d{1,6})?)$";
-        return Pattern.matches(latitudePattern, latitude);
-    }
-
-    private static boolean isValidLongitude(String longitude) {
-        String longitudePattern = "^[-]?((1[0-7]|[0-9])?\\d(\\.\\d{1,6})?|180(\\.0{1,6})?)$";
-        return Pattern.matches(longitudePattern, longitude);
     }
 
 }

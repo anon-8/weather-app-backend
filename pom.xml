@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.codibly</groupId>
     <artifactId>greenEnergyCalc</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>green-energy-calc_backend</name>
     <description>green-energy-calc_backend</description>
     <properties>
