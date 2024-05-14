@@ -1,0 +1,7 @@
+com\codibly\greenEnergyCalc\weather\domain\WeatherDTO$WeatherDTOBuilder.class
+com\codibly\greenEnergyCalc\weather\WeatherService.class
+com\codibly\greenEnergyCalc\Api.class
+com\codibly\greenEnergyCalc\config\AppConfig.class
+com\codibly\greenEnergyCalc\weather\domain\ApiResponse.class
+com\codibly\greenEnergyCalc\weather\domain\WeatherDTO.class
+com\codibly\greenEnergyCalc\weather\WeatherController.class
